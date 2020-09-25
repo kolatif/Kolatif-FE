@@ -10,8 +10,10 @@
           />
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn outlined class="text-none mr-2" color="primary">Login</v-btn>
-        <v-btn color="primary" class="text-none">Register</v-btn>
+        <v-btn outlined class="text-none mr-2" color="primary" to="/login"
+          >Login</v-btn
+        >
+        <v-btn color="primary" class="text-none" to="/register">Register</v-btn>
       </v-app-bar>
     </nav>
   </div>
