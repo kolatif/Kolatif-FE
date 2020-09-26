@@ -112,12 +112,13 @@
           </v-col>
         </v-row>
       </v-row>
-      <v-row align="center" justify="center">
+      <!-- NEWSLETTER -->
+      <v-row align="center" justify="center" class="mt-8">
         <v-col cols="7">
           <v-card flat outlined>
             <div class="d-flex flex-no-wrap justify-space-between">
               <div class="pl-3 pt-3 pb-3">
-                <v-card-title class="headline"
+                <v-card-title class="headline mb-3"
                   >Bergabung dengan newsletter kami</v-card-title
                 >
                 <v-card-subtitle
@@ -138,7 +139,7 @@
                 </div>
               </div>
               <v-avatar class="ma-3" size="200" tile>
-                <v-img :src="require('~/assets/images/email.png')"></v-img>
+                <v-img :src="require('~/assets/images/email.webp')"></v-img>
               </v-avatar>
             </div>
           </v-card>
@@ -154,13 +155,13 @@ export default {
     return {
       items: [
         {
-          src: require('~/assets/images/header-1.jpg'),
+          src: require('~/assets/images/header-1.webp'),
         },
         {
-          src: require('~/assets/images/header-2.jpg'),
+          src: require('~/assets/images/header-2.webp'),
         },
         {
-          src: require('~/assets/images/header-3.jpg'),
+          src: require('~/assets/images/header-3.webp'),
         },
       ],
       news: [
