@@ -2,56 +2,74 @@
   <v-row align="center" justify="center" class="grey lighten-4">
     <v-col cols="12" sm="8" md="4">
       <v-container class="pa-12 logo">
-        <v-img
-          :src="require('~/assets/images/logo.png')"
-          alt="atourin"
-          contain
-        />
+        <nuxt-link to="/">
+          <v-img
+            :src="require('~/assets/images/logo.png')"
+            alt="atourin"
+            contain
+          />
+        </nuxt-link>
       </v-container>
-      <v-card class="pa-8">
-        <div>
-          <strong>Create a new account</strong>
+      <v-card class="pl-8 pb-8 pr-8 pt-6">
+        <div style="text-align: center" class="pb-2">
+          <h2>Hello Future Mentee!</h2>
+          <p class="mt-2">
+            Want to sign up as a
+            <nuxt-link to="/register/mentor">mentor?</nuxt-link>
+          </p>
         </div>
-        <br />
-        <v-form>
+        <v-form v-model="valid">
           <v-text-field
-            v-model="loginInfo.name"
+            v-model="registerInfo.name"
             prepend-inner-icon="mdi-account-outline"
             label="Name"
             :rules="[required('nama')]"
             outlined
             dense
-            class="mb-2"
           />
           <v-text-field
-            v-model="loginInfo.email"
+            v-model="registerInfo.email"
             prepend-inner-icon="mdi-email-outline"
             label="Email"
             :rules="[required('email'), emailFormat()]"
             outlined
             dense
-            class="mb-2"
           />
           <v-text-field
-            v-model="loginInfo.password"
+            v-model="registerInfo.password"
             prepend-inner-icon="mdi-lock-outline"
             label="Password"
             :type="showPassword ? 'text' : 'password'"
-            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
             counter="true"
             :rules="[required('password'), minLength('password', 8)]"
             outlined
             dense
-            @click:append="showPassword = !showPassword"
           />
-          <v-row class="margin">
-            <v-checkbox v-model="rememberMe" class="TnC"></v-checkbox>I agree
-            with the &nbsp;
-            <nuxt-link to="#">Terms and Conditions</nuxt-link>
-          </v-row>
+          <v-text-field
+            v-model="rePassword"
+            prepend-inner-icon="mdi-lock-outline"
+            label="Confirm Password"
+            :type="showPassword ? 'text' : 'password'"
+            counter="true"
+            :rules="[
+              required('confirm password'),
+              confirmPassword(registerInfo.password),
+            ]"
+            outlined
+            dense
+          />
+          <v-text-field
+            v-model="registerInfo.campus"
+            prepend-inner-icon="mdi-account-outline"
+            label="Campus Name"
+            :rules="[required('campus')]"
+            outlined
+            dense
+          />
 
           <v-btn
             block
+            :disabled="!valid"
             class="text-none primmary"
             color="primary"
             @click="loginUser"
@@ -74,15 +92,16 @@ export default {
   layout: 'normal',
   data() {
     return {
-      loginInfo: {
+      rePassword: '',
+      registerInfo: {
         name: '',
         email: '',
         password: '',
+        campus: '',
       },
       showPassword: false,
       ...validation,
       valid: false,
-      rememberMe: false,
     }
   },
   methods: {
@@ -92,18 +111,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-/* .title {
-  margin-bottom: 20px;
-} */
-.TnC {
-  margin-top: -4px;
-}
-.logo {
-  margin-bottom: -20px;
-}
-.margin {
-  margin-left: 0px;
-}
-</style>
