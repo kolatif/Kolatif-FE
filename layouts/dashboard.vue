@@ -2,7 +2,7 @@
   <v-app>
     <DashboardNav />
     <v-main>
-      <nuxt />
+      <nuxt class="grey lighten-4" />
     </v-main>
     <Footer />
   </v-app>

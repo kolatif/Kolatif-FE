@@ -1,5 +1,5 @@
 <template>
-  <v-card :loading="loading" class="mx-auto">
+  <v-card>
     <template slot="progress">
       <v-progress-linear
         color="deep-purple"
@@ -13,12 +13,12 @@
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
 
-    <v-card-title>Cafe Badilico</v-card-title>
+    <v-card-title class="pb-2">{{ mentorData.name }}</v-card-title>
 
-    <v-card-text>
+    <v-card-text class="pb-2">
       <v-row align="center" class="mx-0">
         <v-rating
-          :value="4.5"
+          :value="mentorData.rating"
           color="amber"
           dense
           half-increments
@@ -26,45 +26,45 @@
           size="14"
         ></v-rating>
 
-        <div class="grey--text ml-4">4.5 (413)</div>
+        <div class="grey--text ml-4">
+          {{ mentorData.rating }} &nbsp; ({{ mentorData.reviews }})
+        </div>
       </v-row>
 
-      <div class="my-4 subtitle-1">$ • Italian, Cafe</div>
-
-      <div>
-        Small plates, salads & sandwiches - an intimate setting with 12 indoor
-        seats plus patio seating.
+      <div class="mt-2 subtitle-1">
+        {{ mentorData.jobTitle }} at {{ mentorData.company }}
       </div>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
 
-    <v-card-title>Tonight's availability</v-card-title>
+    <v-card-title class="pb-0 pt-2"> Expertise</v-card-title>
 
-    <v-card-text>
-      <v-chip-group
-        v-model="selection"
-        active-class="deep-purple accent-4 white--text"
-        column
-      >
-        <v-chip>5:30PM</v-chip>
-
-        <v-chip>7:30PM</v-chip>
-
-        <v-chip>8:00PM</v-chip>
-
-        <v-chip>9:00PM</v-chip>
+    <v-card-text class="pt-0 mt-0 pb-2">
+      <v-chip-group column>
+        <div v-for="expertise in mentorData.expertise" :key="expertise">
+          <v-chip>{{ expertise }}</v-chip>
+        </div>
+        <v-chip draggable>teset</v-chip>
       </v-chip-group>
     </v-card-text>
 
-    <v-card-actions>
-      <v-btn color="deep-purple lighten-2" text> Reserve </v-btn>
+    <v-card-actions class="pt-0">
+      <v-btn color="primary" text> Book </v-btn>
+      <v-btn color="primary " text> Detail </v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    mentorData: {
+      type: Object,
+      required: true,
+    },
+  },
+}
 </script>
 
 <style></style>
