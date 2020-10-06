@@ -2,7 +2,7 @@
   <nav>
     <v-app-bar color="white" elevate-on-scroll class="px-12" fixed app>
       <v-toolbar-title>
-        <nuxt-link to="/dashboard">
+        <nuxt-link to="/mentors">
           <img
             src="~/assets/images/logo.png"
             alt="image"
@@ -11,7 +11,7 @@
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text class="text-none mr-2" color="primary" to="/dashboard"
+      <v-btn text class="text-none mr-2" color="primary" to="/mentors"
         >Mentors</v-btn
       >
       <v-btn text color="primary" class="text-none mr-2" to="/sessions"

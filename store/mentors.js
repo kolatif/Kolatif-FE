@@ -5,8 +5,25 @@ export const state = () => ({
       name: 'Joseph Joestar',
       rating: 5,
       reviews: 150,
-      jobTitle: 'Software Engineer',
-      company: 'Kolatif',
+      workExperience: [
+        {
+          jobTitle: 'Software Engineer',
+          company: 'PT. Kolaborasi dan Aktif Internasional',
+          duration: ['September 2019', 'Present'],
+        },
+        {
+          jobTitle: 'Software Engineer',
+          company: 'PT. HeyyOneNetwork',
+          duration: ['September 2018', 'September 2019'],
+        },
+      ],
+      education: [
+        {
+          campus: 'IPB University',
+          major: 'Computer Science',
+          year: ['September 2015', 'September 2019'],
+        },
+      ],
       expertise: [
         'Frontend Development',
         'Mobile Development',
@@ -19,8 +36,20 @@ export const state = () => ({
       name: 'Joseph Joestar',
       rating: 5,
       reviews: 150,
-      jobTitle: 'Software Engineer',
-      company: 'Kolatif',
+      workExperience: [
+        {
+          jobTitle: 'Software Engineer',
+          company: 'Kolatif',
+          workDate: ['September 2019', 'Present'],
+        },
+      ],
+      education: [
+        {
+          campus: 'IPB University',
+          major: 'Computer Science',
+          year: ['September 2015', 'September 2019'],
+        },
+      ],
       expertise: [
         'Frontend Development',
         'Mobile Development',
@@ -33,8 +62,20 @@ export const state = () => ({
       name: 'Joseph Joestar',
       rating: 5,
       reviews: 150,
-      jobTitle: 'Software Engineer',
-      company: 'Kolatif',
+      workExperience: [
+        {
+          jobTitle: 'Software Engineer',
+          company: 'Kolatif',
+          workDate: ['September 2019', 'Present'],
+        },
+      ],
+      education: [
+        {
+          campus: 'IPB University',
+          major: 'Computer Science',
+          year: ['September 2015', 'September 2019'],
+        },
+      ],
       expertise: [
         'Frontend Development',
         'Mobile Development',
@@ -47,8 +88,20 @@ export const state = () => ({
       name: 'Joseph Joestar',
       rating: 5,
       reviews: 150,
-      jobTitle: 'Software Engineer',
-      company: 'Kolatif',
+      workExperience: [
+        {
+          jobTitle: 'Software Engineer',
+          company: 'Kolatif',
+          workDate: ['September 2019', 'Present'],
+        },
+      ],
+      education: [
+        {
+          campus: 'IPB University',
+          major: 'Computer Science',
+          year: ['September 2015', 'September 2019'],
+        },
+      ],
       expertise: [
         'Frontend Development',
         'Mobile Development',
@@ -61,8 +114,20 @@ export const state = () => ({
       name: 'Joseph Joestar',
       rating: 5,
       reviews: 150,
-      jobTitle: 'Software Engineer',
-      company: 'Kolatif',
+      workExperience: [
+        {
+          jobTitle: 'Software Engineer',
+          company: 'Kolatif',
+          workDate: ['September 2019', 'Present'],
+        },
+      ],
+      education: [
+        {
+          campus: 'IPB University',
+          major: 'Computer Science',
+          year: ['September 2015', 'September 2019'],
+        },
+      ],
       expertise: [
         'Frontend Development',
         'Mobile Development',
@@ -75,8 +140,20 @@ export const state = () => ({
       name: 'Joseph Joestar',
       rating: 5,
       reviews: 150,
-      jobTitle: 'Software Engineer',
-      company: 'Kolatif',
+      workExperience: [
+        {
+          jobTitle: 'Software Engineer',
+          company: 'Kolatif',
+          workDate: ['September 2019', 'Present'],
+        },
+      ],
+      education: [
+        {
+          campus: 'IPB University',
+          major: 'Computer Science',
+          year: ['September 2015', 'September 2019'],
+        },
+      ],
       expertise: [
         'Frontend Development',
         'Mobile Development',

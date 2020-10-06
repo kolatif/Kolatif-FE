@@ -25,7 +25,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Mentors from '../../components/dashboard/Mentors'
+import Mentors from '../../components/mentors/Mentors'
 export default {
   layout: 'dashboard',
   components: {

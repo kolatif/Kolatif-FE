@@ -31,8 +31,12 @@
         </div>
       </v-row>
 
-      <div class="mt-2 subtitle-1">
-        {{ mentorData.jobTitle }} at {{ mentorData.company }}
+      <div
+        v-for="(work, index) in mentorData.workExperience"
+        :key="index"
+        class="mt-2 subtitle-1"
+      >
+        <div v-if="index == 0">{{ work.jobTitle }} at {{ work.company }}</div>
       </div>
     </v-card-text>
 
@@ -51,7 +55,9 @@
 
     <v-card-actions class="pt-0">
       <v-btn color="primary" text> Book </v-btn>
-      <v-btn color="primary " text> Detail </v-btn>
+      <v-btn color="primary " text :to="`/mentors/${mentorData.id}`">
+        Detail
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
