@@ -3,15 +3,18 @@ export const state = () => ({
     {
       id: 1,
       name: 'Joseph Joestar',
+      role: 'mentor',
       rating: 5,
       reviews: 150,
       workExperience: [
         {
+          id: 1,
           jobTitle: 'Software Engineer',
           company: 'PT. Kolaborasi dan Aktif Internasional',
           duration: ['September 2019', 'Present'],
         },
         {
+          id: 2,
           jobTitle: 'Software Engineer',
           company: 'PT. HeyyOneNetwork',
           duration: ['September 2018', 'September 2019'],
@@ -30,6 +33,8 @@ export const state = () => ({
         'UI Design',
         'Product Design',
       ],
+      availability:
+        'Monday to Friday above 8.00 P.M. If you want to reschedule please contact me at joseph@kolatif.com',
     },
     {
       id: 2,
@@ -179,4 +184,10 @@ export const actions = {
     // TODO: API call to get mentors
     // TODO: commit to saveMentors method
   },
+  // bookMentor({commit}, book){
+  //   //TODO: Add Book to the API
+  //   // eslint-disable-next-line no-console
+  //   console.log(book)
+
+  // }
 }

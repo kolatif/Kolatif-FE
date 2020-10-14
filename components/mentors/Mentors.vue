@@ -52,11 +52,11 @@
         <v-chip draggable>teset</v-chip>
       </v-chip-group>
     </v-card-text>
+    <v-divider class="mx-4 mb-2"></v-divider>
 
     <v-card-actions class="pt-0">
-      <v-btn color="primary" text> Book </v-btn>
-      <v-btn color="primary " text :to="`/mentors/${mentorData.id}`">
-        Detail
+      <v-btn color="primary " block text :to="`/mentors/${mentorData.id}`">
+        View Mentor Profile
       </v-btn>
     </v-card-actions>
   </v-card>

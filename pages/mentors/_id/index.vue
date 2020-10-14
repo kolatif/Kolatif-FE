@@ -8,7 +8,7 @@
             aspect-ratio="1"
           ></v-img>
         </v-col>
-        <v-col cols="12" lg="6" md="6" class="pl-12">
+        <v-col cols="12" lg="10" md="10" class="pl-12">
           <h2>
             {{ mentor.name }}
           </h2>
@@ -31,9 +31,8 @@
             <span> &nbsp;({{ mentor.reviews }}) </span>
           </v-row>
           <p></p>
-        </v-col>
-        <v-col cols="12" lg="4" md="4">
-          <v-btn large color="primary">Book Mentor</v-btn>
+
+          <BookDialog :mentor="mentor" />
         </v-col>
       </v-row>
       <h2 class="mt-3">Expertise</h2>
@@ -44,8 +43,8 @@
       </v-chip-group>
       <h2 class="mt-3">My Working Experience</h2>
       <div
-        v-for="(experience, index) in mentor.workExperience"
-        :key="index"
+        v-for="experience in mentor.workExperience"
+        :key="experience.id"
         class="mt-3"
       >
         <v-row>
@@ -91,13 +90,19 @@
 </template>
 
 <script>
+// import validation from '~/utils/validation'
+import BookDialog from '../../../components/mentors/BookDialog'
 export default {
+  components: {
+    BookDialog,
+  },
   props: {
     mentor: {
       type: Object,
       required: true,
     },
   },
+  scrollToTop: true,
 }
 </script>
 
