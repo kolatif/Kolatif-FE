@@ -41,7 +41,6 @@
 
 <script>
 export default {
-  name: 'SingleSession',
   props: {
     session: {
       type: Object,
