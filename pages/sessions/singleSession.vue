@@ -26,12 +26,14 @@
           <v-btn text color="primary" :to="`/mentors/${mentordata.id}`"
             >Mentor Detail</v-btn
           >
-          <v-btn text color="primary"> Leave a Review </v-btn>
+          <v-btn v-if="session.status === 'Completed'" text color="primary">
+            Leave a Review
+          </v-btn>
         </v-card-actions>
       </div>
 
       <v-avatar class="ma-3" size="180" tile>
-        <v-img :src="require('~/assets/images/404.png')"></v-img>
+        <v-img :src="require('~/assets/images/joseph.jpeg')"></v-img>
       </v-avatar>
     </div>
   </v-card>

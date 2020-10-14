@@ -1,9 +1,6 @@
 <template>
   <v-card class="mx-auto">
-    <v-img
-      height="250"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
+    <v-img height="250" :src="require('~/assets/images/workshop.jpg')"></v-img>
 
     <div class="px-3" style="text-align: center">
       <v-card-title>{{ eventData.name }}</v-card-title>
