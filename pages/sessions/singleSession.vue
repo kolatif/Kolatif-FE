@@ -10,13 +10,22 @@
               {{ work.jobTitle }} at {{ work.company }}
             </div>
           </div>
-          <div class="mt-1">Status: {{ session.status }}</div>
+          <div class="mt-1" :class="{ color: session.status }">
+            Status: {{ session.status }}
+          </div>
           <div class="mt-1">Date: {{ session.date }} at {{ session.time }}</div>
-          <div class="mt-1">Google Meet: {{ session.googleMeet }}</div>
+          <div
+            v-if="session.status == 'Accepted' || session.status == 'Completed'"
+            class="mt-1"
+          >
+            Google Meet: {{ session.googleMeet }}
+          </div>
         </v-card-text>
 
         <v-card-actions class="pb-0">
-          <v-btn text color="primary">Details</v-btn>
+          <v-btn text color="primary" :to="`/mentors/${mentordata.id}`"
+            >Mentor Detail</v-btn
+          >
           <v-btn text color="primary"> Leave a Review </v-btn>
         </v-card-actions>
       </div>
@@ -40,6 +49,11 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data() {
+    return {
+      Pending: 'orange--text',
+    }
   },
 }
 </script>

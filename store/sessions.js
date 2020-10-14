@@ -6,7 +6,7 @@ export const state = () => ({
       sessionId: 21,
       menteeId: 123,
       mentorId: 1,
-      status: 'Pending',
+      status: 'Accepted',
       date: '31 Oktober 2020',
       time: '17.30',
       googleMeet: 'https://meet.google.com',
@@ -26,7 +26,7 @@ export const state = () => ({
       sessionId: 22,
       menteeId: 123,
       mentorId: 2,
-      status: 'Pending',
+      status: 'Declined',
       date: '31 Oktober 2020',
       time: '17.30',
       googleMeet: 'https://meet.google.com',
@@ -36,7 +36,7 @@ export const state = () => ({
       sessionId: 22,
       menteeId: 123,
       mentorId: 2,
-      status: 'Pending',
+      status: 'Completed',
       date: '31 Oktober 2020',
       time: '17.30',
       googleMeet: 'https://meet.google.com',
@@ -119,6 +119,26 @@ export const state = () => ({
   ],
   myMentees: [],
 })
+
+export const getters = {
+  allSessions: (state) => state.sessions,
+  acceptedSessions: (state) =>
+    state.sessions.filter((session) => {
+      return session.status === 'Accepted'
+    }),
+  pendingSessions: (state) =>
+    state.sessions.filter((session) => {
+      return session.status === 'Pending'
+    }),
+  completedSessions: (state) =>
+    state.sessions.filter((session) => {
+      return session.status === 'Completed'
+    }),
+  cancelledSessions: (state) =>
+    state.sessions.filter((session) => {
+      return session.status === 'Cancelled'
+    }),
+}
 
 export const mutations = {}
 
