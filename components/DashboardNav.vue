@@ -21,7 +21,7 @@
         >Events</v-btn
       >
       <v-btn text color="primary" class="text-none mr-2" to="/faq">FAQ</v-btn>
-      <v-btn class="text-none" text color="primary" fab small>
+      <v-btn class="text-none" text color="primary" fab small to="/profile">
         <v-icon large>mdi-account-circle</v-icon>
       </v-btn>
     </v-app-bar>

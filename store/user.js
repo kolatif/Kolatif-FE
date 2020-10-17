@@ -2,18 +2,12 @@ export const state = () => ({
   user: {
     name: 'Joseph Joestar',
     role: 'mentee',
-    experience: [
+    workExperience: [
       {
         id: 1,
         jobTitle: 'Head of Education Division',
         company: 'Himpunan Mahasiswa Ilmu Komputer',
         duration: ['September 2019', 'Present'],
-      },
-      {
-        id: 2,
-        jobTitle: 'Software Engineer',
-        company: 'PT. HeyyOneNetwork',
-        duration: ['September 2018', 'September 2019'],
       },
     ],
     education: [
