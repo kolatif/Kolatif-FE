@@ -60,5 +60,10 @@ export default {
       // TODO LOGIN FUNCTION
     },
   },
+  head() {
+    return {
+      title: 'Register',
+    }
+  },
 }
 </script>

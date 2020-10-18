@@ -38,7 +38,7 @@
                 Login using your google account to find a mentor or become a
                 mentor now.
               </p>
-              <v-btn block large color="primary" to="/register/mentor">
+              <v-btn block large color="primary" to="/register">
                 <v-icon left dark> mdi-google </v-icon>
                 Google
               </v-btn>

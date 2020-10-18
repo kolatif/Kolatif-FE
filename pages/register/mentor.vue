@@ -123,5 +123,10 @@ export default {
       console.log(this.registerInfo)
     },
   },
+  head() {
+    return {
+      title: 'Register Mentor',
+    }
+  },
 }
 </script>
