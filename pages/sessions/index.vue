@@ -92,6 +92,11 @@ export default {
       this.sessions = this.cancelledSessions
     },
   },
+  head() {
+    return {
+      title: 'Sessions',
+    }
+  },
   // methods: {
   //   getSessions() {},
   //   getMentors() {},

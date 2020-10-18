@@ -81,6 +81,11 @@ export default {
       user: (state) => state.user,
     }),
   },
+  head() {
+    return {
+      title: 'Profile',
+    }
+  },
 }
 </script>
 

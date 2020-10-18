@@ -111,6 +111,11 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      title: 'Events',
+    }
+  },
 }
 </script>
 

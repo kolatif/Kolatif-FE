@@ -50,6 +50,11 @@ export default {
       console.log('It Works')
     },
   },
+  head() {
+    return {
+      title: 'Mentors',
+    }
+  },
 }
 </script>
 

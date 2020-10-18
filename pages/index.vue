@@ -98,6 +98,12 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      title: 'Kolatif',
+      titleTemplate: '%s - Connecting mentors and mentees everywhere',
+    }
+  },
 }
 </script>
 
