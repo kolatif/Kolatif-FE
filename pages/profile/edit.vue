@@ -49,15 +49,35 @@
               dense
             >
             </v-text-field>
-            <v-text-field
-              v-model="experience.duration"
-              label="Duration"
-              outlined
-              dense
+            <v-menu
+              ref="menuStartDate"
+              v-model="menuStartDate"
+              :close-on-content-click="false"
+              transition="scale-transition"
+              offset-y
+              max-width="290px"
+              min-width="290px"
             >
-            </v-text-field>
+              <template v-slot:activator="{ on, attrs }">
+                <v-text-field
+                  v-model="dura"
+                  label="Date"
+                  hint="YYYY/MM/DD format"
+                  persistent-hint
+                  prepend-icon="mdi-calendar"
+                  v-bind="attrs"
+                  v-on="on"
+                ></v-text-field>
+              </template>
+              <v-date-picker
+                v-model="experience.startDate"
+                no-title
+                @input="menuStartDate = false"
+              ></v-date-picker>
+            </v-menu>
             <p class="my-0">{{ experience.company }}</p>
-            <p class="my-0">{{ experience.duration.join(' - ') }}</p>
+            <p class="my-0">{{ experience.startDate }}</p>
+            <p class="my-0">{{ experience.endDate }}</p>
           </v-col>
         </v-row>
       </div>
@@ -79,7 +99,8 @@
               <b>{{ education.campus }}</b>
             </p>
             <p class="my-0">{{ education.major }}</p>
-            <p class="my-0">{{ education.year.join(' - ') }}</p>
+            <p class="my-0">{{ education.startDate }}</p>
+            <p class="my-0">{{ education.endDate }}</p>
           </v-col>
         </v-row>
       </div>
@@ -95,6 +116,7 @@ export default {
   data() {
     return {
       userTemp: {},
+      menuStartDate: '',
     }
   },
   computed: {

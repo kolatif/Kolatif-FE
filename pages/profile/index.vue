@@ -42,7 +42,9 @@
               <b>{{ experience.jobTitle }}</b>
             </p>
             <p class="my-0">{{ experience.company }}</p>
-            <p class="my-0">{{ experience.duration.join(' - ') }}</p>
+            <p class="my-0">
+              {{ experience.startDate }} - {{ experience.endDate }}
+            </p>
           </v-col>
         </v-row>
       </div>
@@ -64,7 +66,9 @@
               <b>{{ education.campus }}</b>
             </p>
             <p class="my-0">{{ education.major }}</p>
-            <p class="my-0">{{ education.year.join(' - ') }}</p>
+            <p class="my-0">
+              {{ education.startDate }} - {{ education.endDate }}
+            </p>
           </v-col>
         </v-row>
       </div>

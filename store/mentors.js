@@ -11,20 +11,23 @@ export const state = () => ({
           id: 1,
           jobTitle: 'Software Engineer',
           company: 'PT. Kolaborasi dan Aktif Internasional',
-          duration: ['September 2019', 'Present'],
+          startDate: 'September 2019',
+          endDate: 'present',
         },
         {
           id: 2,
           jobTitle: 'Software Engineer',
           company: 'PT. HeyyOneNetwork',
-          duration: ['September 2018', 'September 2019'],
+          startDate: 'September 2018',
+          endDate: 'September 2019',
         },
       ],
       education: [
         {
           campus: 'IPB University',
           major: 'Computer Science',
-          year: ['September 2015', 'September 2019'],
+          startDate: 'September 2015',
+          endDate: 'September 2019',
         },
       ],
       expertise: [
@@ -45,14 +48,16 @@ export const state = () => ({
         {
           jobTitle: 'Software Engineer',
           company: 'Kolatif',
-          workDate: ['September 2019', 'Present'],
+          startDate: 'September 2019',
+          endDate: 'present',
         },
       ],
       education: [
         {
           campus: 'IPB University',
           major: 'Computer Science',
-          year: ['September 2015', 'September 2019'],
+          startDate: 'September 2015',
+          endDate: 'September 2019',
         },
       ],
       expertise: [
@@ -71,14 +76,16 @@ export const state = () => ({
         {
           jobTitle: 'Software Engineer',
           company: 'Kolatif',
-          workDate: ['September 2019', 'Present'],
+          startDate: 'September 2019',
+          endDate: 'present',
         },
       ],
       education: [
         {
           campus: 'IPB University',
           major: 'Computer Science',
-          year: ['September 2015', 'September 2019'],
+          startDate: 'September 2015',
+          endDate: 'September 2019',
         },
       ],
       expertise: [
@@ -97,14 +104,16 @@ export const state = () => ({
         {
           jobTitle: 'Software Engineer',
           company: 'Kolatif',
-          workDate: ['September 2019', 'Present'],
+          startDate: 'September 2019',
+          endDate: 'present',
         },
       ],
       education: [
         {
           campus: 'IPB University',
           major: 'Computer Science',
-          year: ['September 2015', 'September 2019'],
+          startDate: 'September 2015',
+          endDate: 'September 2019',
         },
       ],
       expertise: [
@@ -123,14 +132,16 @@ export const state = () => ({
         {
           jobTitle: 'Software Engineer',
           company: 'Kolatif',
-          workDate: ['September 2019', 'Present'],
+          startDate: 'September 2019',
+          endDate: 'present',
         },
       ],
       education: [
         {
           campus: 'IPB University',
           major: 'Computer Science',
-          year: ['September 2015', 'September 2019'],
+          startDate: 'September 2015',
+          endDate: 'September 2019',
         },
       ],
       expertise: [
@@ -149,14 +160,16 @@ export const state = () => ({
         {
           jobTitle: 'Software Engineer',
           company: 'Kolatif',
-          workDate: ['September 2019', 'Present'],
+          startDate: 'September 2019',
+          endDate: 'present',
         },
       ],
       education: [
         {
           campus: 'IPB University',
           major: 'Computer Science',
-          year: ['September 2015', 'September 2019'],
+          startDate: 'September 2015',
+          endDate: 'September 2019',
         },
       ],
       expertise: [

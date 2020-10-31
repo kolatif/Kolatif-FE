@@ -7,19 +7,22 @@ export const state = () => ({
         id: 1,
         jobTitle: 'Head of Education Division',
         company: 'Himpunan Mahasiswa Ilmu Komputer',
-        duration: ['September 2019', 'Present'],
+        startDate: 'September 2019',
+        endDate: 'Present',
       },
     ],
     education: [
       {
         campus: 'IPB University',
         major: 'Computer Science',
-        year: ['September 2015', 'September 2019'],
+        startDate: 'September 2015',
+        endDate: 'September 2019',
       },
       {
         campus: 'SMAN 78 Jakarta',
         major: 'Natural Science',
-        year: ['September 2012', 'September 2015'],
+        startDate: 'September 2012',
+        endDate: 'September 2015',
       },
     ],
     expertise: [
