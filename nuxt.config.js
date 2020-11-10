@@ -36,6 +36,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/proxy',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -57,6 +58,11 @@ export default {
           success: colors.green.accent3,
         },
       },
+    },
+  },
+  proxy: {
+    '/api': {
+      target: 'http://127.0.0.1:8000',
     },
   },
 
