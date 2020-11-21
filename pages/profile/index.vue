@@ -33,7 +33,7 @@
         <v-row>
           <v-col cols="12" lg="1" md="1">
             <v-img
-              :src="require('~/assets/images/img-placeholder.jpg')"
+              :src="require('~/assets/images/company.webp')"
               max-width="100"
             ></v-img>
           </v-col>
@@ -54,11 +54,12 @@
         :key="index"
         class="mt-3"
       >
-        <v-row>
+        <v-row align="center">
           <v-col cols="12" lg="1" md="1">
             <v-img
-              :src="require('~/assets/images/img-placeholder.jpg')"
-              max-width="100"
+              :src="require('~/assets/images/education.png')"
+              class="ml-4"
+              max-width="50"
             ></v-img>
           </v-col>
           <v-col cols="12" lg="10" md="10">

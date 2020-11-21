@@ -46,7 +46,9 @@
             </div>
             <div class="mt-4">
               <v-btn color="primary" to="/mentors">Find your mentor!</v-btn>
-              <v-btn class="blue--text" to="/mentors">Become a Mentor!</v-btn>
+              <v-btn class="primary--text" to="/mentors"
+                >Become a Mentor!</v-btn
+              >
             </div>
           </v-col>
         </v-row>

@@ -2,7 +2,7 @@
   <v-footer padless>
     <v-col cols="12" class="pa-0">
       <v-card flat tile class="primary lighten-1 white--text text-center">
-        <v-card-text>
+        <!-- <v-card-text>
           <v-btn
             v-for="icon in icons"
             :key="icon"
@@ -13,7 +13,7 @@
           </v-btn>
         </v-card-text>
 
-        <v-divider></v-divider>
+        <v-divider></v-divider> -->
 
         <v-card-text class="white--text">
           {{ new Date().getFullYear() }} — <strong>Kolatif Valley</strong>
